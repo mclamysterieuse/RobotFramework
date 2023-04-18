@@ -11,7 +11,7 @@ Test de connexionOK
     Vérifier l'affichage de la page product
     Naviguer dans la CartPage
     Naviguer dans la page shipping
-    Naviguer derniere page
+    Naviguer dans la derniere page
     
 
 Test de connexion identifiant invalide
@@ -41,10 +41,12 @@ Naviguer dans la CartPage
     Click Element   css:#checkout
 
 Naviguer dans la page shipping   
+    Sleep    10
     Input Text    css:#first-name        rrrr
     Input Text    css:#last-name         rrrr
     Input Text    css:#postal-code       rrrr
-     Click Element    css:#continue
+    Click Element    css:#continue
 
-Naviguer derniere page
+Naviguer dans la derniere page
+    Sleep    10
      Click Element    css:#finish
