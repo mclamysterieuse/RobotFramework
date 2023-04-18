@@ -25,28 +25,31 @@ Test de connexion utilisateur bloqué
 
 *** Keywords ***
 connexionOK
+    Sleep    2
     [Arguments]        ${username}    ${password}
     Input Text        css:input#user-name       ${username}  
     Input Password    id:password               ${password}
     Click Button      css:input#login-button
 
 Vérifier l'affichage de la page product
+    Sleep    2
      Element Should Be Visible    css:div.app_logo
      Click Element    css:#item_4_title_link > div
 
 Naviguer dans la CartPage
+    Sleep     2
     Click Element    css:#add-to-cart-sauce-labs-backpack
     Click Element    css:#shopping_cart_container > a
     Element Should Contain    css:#item_4_title_link > div    Sauce
     Click Element   css:#checkout
 
 Naviguer dans la page shipping   
-    Sleep    10
+    Sleep    2
     Input Text    css:#first-name        rrrr
     Input Text    css:#last-name         rrrr
     Input Text    css:#postal-code       rrrr
     Click Element    css:#continue
 
 Naviguer dans la derniere page
-    Sleep    10
+    Sleep    2
      Click Element    css:#finish
