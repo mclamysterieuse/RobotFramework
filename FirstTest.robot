@@ -1,14 +1,17 @@
 *** Settings ***
 Library  SeleniumLibrary
+
+Test Setup   Open Browser        ${monUrl}    chrome
 *** Variables ***
 ${monUrl}   https://www.saucedemo.com/
-
 
 *** Test Cases ***
 Test de connexionOK
     ConnexionOK    standard_user  secret_sauce
     Vérifier l'affichage de la page product
     Naviguer dans la CartPage
+    Naviguer dans la page shipping
+    Naviguer derniere page
     
 
 Test de connexion identifiant invalide
@@ -23,7 +26,6 @@ Test de connexion utilisateur bloqué
 *** Keywords ***
 connexionOK
     [Arguments]        ${username}    ${password}
-    Open Browser        ${monUrl}    chrome
     Input Text        css:input#user-name       ${username}  
     Input Password    id:password               ${password}
     Click Button      css:input#login-button
@@ -36,3 +38,13 @@ Naviguer dans la CartPage
     Click Element    css:#add-to-cart-sauce-labs-backpack
     Click Element    css:#shopping_cart_container > a
     Element Should Contain    css:#item_4_title_link > div    Sauce
+    Click Element   css:#checkout
+
+Naviguer dans la page shipping   
+    Input Text    css:#first-name        rrrr
+    Input Text    css:#last-name         rrrr
+    Input Text    css:#postal-code       rrrr
+     Click Element    css:#continue
+
+Naviguer derniere page
+     Click Element    css:#finish

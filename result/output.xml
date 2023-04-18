@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230418 15:47:54.028" rpa="false" schemaversion="3">
+<suite id="s1" name="FirstTest" source="C:\Users\ib\Downloads\RBF\FirstTest.robot">
+<test id="s1-t1" name="Test de connexionOK" line="9">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${monUrl}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230418 15:47:54.221" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230418 15:47:54.221" endtime="20230418 15:47:55.835"/>
+</kw>
+<kw name="connexionOK">
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 15:47:55.836" level="INFO">Typing text 'standard_user' into text field 'css:input#user-name'.</msg>
+<status status="PASS" starttime="20230418 15:47:55.836" endtime="20230418 15:47:55.922"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 15:47:55.923" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230418 15:47:55.956" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230418 15:47:55.996" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230418 15:47:55.923" endtime="20230418 15:47:55.996"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:input#login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230418 15:47:55.996" level="INFO">Clicking button 'css:input#login-button'.</msg>
+<status status="PASS" starttime="20230418 15:47:55.996" endtime="20230418 15:47:56.074"/>
+</kw>
+<status status="PASS" starttime="20230418 15:47:55.835" endtime="20230418 15:47:56.074"/>
+</kw>
+<kw name="Vérifier l'affichage de la page product">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>css:div.app_logo</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230418 15:47:56.096" level="INFO">Element 'css:div.app_logo' is displayed.</msg>
+<status status="PASS" starttime="20230418 15:47:56.075" endtime="20230418 15:47:56.096"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:#item_4_title_link &gt; div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230418 15:47:56.097" level="INFO">Clicking element 'css:#item_4_title_link &gt; div'.</msg>
+<status status="PASS" starttime="20230418 15:47:56.096" endtime="20230418 15:47:56.138"/>
+</kw>
+<status status="PASS" starttime="20230418 15:47:56.074" endtime="20230418 15:47:56.138"/>
+</kw>
+<kw name="Naviguer dans la CartPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:#add-to-cart-sauce-labs-backpack</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230418 15:47:56.140" level="INFO">Clicking element 'css:#add-to-cart-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20230418 15:47:56.139" endtime="20230418 15:47:56.178"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:#shopping_cart_container &gt; a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230418 15:47:56.179" level="INFO">Clicking element 'css:#shopping_cart_container &gt; a'.</msg>
+<status status="PASS" starttime="20230418 15:47:56.179" endtime="20230418 15:47:56.218"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>css:#item_4_title_link &gt; div</arg>
+<arg>Sauce</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230418 15:47:56.235" level="INFO">Element 'css:#item_4_title_link &gt; div' contains text 'Sauce'.</msg>
+<status status="PASS" starttime="20230418 15:47:56.218" endtime="20230418 15:47:56.236"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:#checkout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230418 15:47:56.236" level="INFO">Clicking element 'css:#checkout'.</msg>
+<status status="PASS" starttime="20230418 15:47:56.236" endtime="20230418 15:47:56.276"/>
+</kw>
+<status status="PASS" starttime="20230418 15:47:56.139" endtime="20230418 15:47:56.276"/>
+</kw>
+<kw name="Naviguer dans la page shipping">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:#first-name</arg>
+<arg>rrrr</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 15:47:56.277" level="INFO">Typing text 'rrrr' into text field 'css:#first-name'.</msg>
+<status status="PASS" starttime="20230418 15:47:56.277" endtime="20230418 15:47:56.349"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:#last-name</arg>
+<arg>rrrr</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 15:47:56.350" level="INFO">Typing text 'rrrr' into text field 'css:#last-name'.</msg>
+<status status="PASS" starttime="20230418 15:47:56.349" endtime="20230418 15:47:56.420"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:#postal-code</arg>
+<arg>rrrr</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 15:47:56.420" level="INFO">Typing text 'rrrr' into text field 'css:#postal-code'.</msg>
+<status status="PASS" starttime="20230418 15:47:56.420" endtime="20230418 15:47:56.492"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:#continue</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230418 15:47:56.493" level="INFO">Clicking element 'css:#continue'.</msg>
+<status status="PASS" starttime="20230418 15:47:56.492" endtime="20230418 15:47:56.541"/>
+</kw>
+<status status="PASS" starttime="20230418 15:47:56.277" endtime="20230418 15:47:56.541"/>
+</kw>
+<kw name="Naviguer derniere page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:#finish</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230418 15:47:56.542" level="INFO">Clicking element 'css:#finish'.</msg>
+<status status="PASS" starttime="20230418 15:47:56.542" endtime="20230418 15:47:56.582"/>
+</kw>
+<status status="PASS" starttime="20230418 15:47:56.542" endtime="20230418 15:47:56.582"/>
+</kw>
+<status status="PASS" starttime="20230418 15:47:54.220" endtime="20230418 15:47:56.583"/>
+</test>
+<test id="s1-t2" name="Test de connexion identifiant invalide" line="17">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${monUrl}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230418 15:47:56.585" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230418 15:47:56.584" endtime="20230418 15:47:58.573"/>
+</kw>
+<kw name="connexionOK">
+<arg>locked_out_user</arg>
+<arg>secret_sauce</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 15:47:58.574" level="INFO">Typing text 'locked_out_user' into text field 'css:input#user-name'.</msg>
+<status status="PASS" starttime="20230418 15:47:58.574" endtime="20230418 15:47:58.656"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 15:47:58.656" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230418 15:47:58.688" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230418 15:47:58.729" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230418 15:47:58.656" endtime="20230418 15:47:58.729"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:input#login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230418 15:47:58.729" level="INFO">Clicking button 'css:input#login-button'.</msg>
+<status status="PASS" starttime="20230418 15:47:58.729" endtime="20230418 15:47:58.782"/>
+</kw>
+<status status="PASS" starttime="20230418 15:47:58.574" endtime="20230418 15:47:58.782"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>css:div.error-message-container.error &gt; h3</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230418 15:47:58.801" level="INFO">Element 'css:div.error-message-container.error &gt; h3' is displayed.</msg>
+<status status="PASS" starttime="20230418 15:47:58.782" endtime="20230418 15:47:58.802"/>
+</kw>
+<status status="PASS" starttime="20230418 15:47:56.584" endtime="20230418 15:47:58.802"/>
+</test>
+<test id="s1-t3" name="Test de connexion utilisateur bloqué" line="21">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${monUrl}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230418 15:47:58.804" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230418 15:47:58.803" endtime="20230418 15:48:00.695"/>
+</kw>
+<kw name="connexionOK">
+<arg>locked_out_user</arg>
+<arg>secret_sauce1</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 15:48:00.696" level="INFO">Typing text 'locked_out_user' into text field 'css:input#user-name'.</msg>
+<status status="PASS" starttime="20230418 15:48:00.696" endtime="20230418 15:48:00.783"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 15:48:00.784" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230418 15:48:00.821" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230418 15:48:00.869" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230418 15:48:00.783" endtime="20230418 15:48:00.869"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:input#login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230418 15:48:00.870" level="INFO">Clicking button 'css:input#login-button'.</msg>
+<status status="PASS" starttime="20230418 15:48:00.869" endtime="20230418 15:48:00.924"/>
+</kw>
+<status status="PASS" starttime="20230418 15:48:00.695" endtime="20230418 15:48:00.924"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>css:div.error-message-container.error &gt; h3</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230418 15:48:00.944" level="INFO">Element 'css:div.error-message-container.error &gt; h3' is displayed.</msg>
+<status status="PASS" starttime="20230418 15:48:00.924" endtime="20230418 15:48:00.944"/>
+</kw>
+<status status="PASS" starttime="20230418 15:47:58.803" endtime="20230418 15:48:00.944"/>
+</test>
+<status status="PASS" starttime="20230418 15:47:54.029" endtime="20230418 15:48:00.946"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="FirstTest">FirstTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
